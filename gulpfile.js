@@ -8,7 +8,7 @@ let uglify = require('gulp-uglify');
 let cssmin = require('gulp-cssmin');
 
 gulp.task('sass', function() {
-   return gulp.src('app/scss/style.scss')
+   return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(rename({suffix: '.min'}))
     .pipe(autoprefixer({
@@ -32,7 +32,7 @@ gulp.task('style', function(){
     .pipe(concat('libs.min.css'))
     .pipe(cssmin())
     .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({stream: true}))
+    // .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('script', function(){
@@ -43,7 +43,7 @@ gulp.task('script', function(){
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
-    .pipe(browserSync.reload({stream: true}))
+    // .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('html', function() {
@@ -65,7 +65,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('app/scss/style.scss', gulp.parallel('sass'))
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/*.html', gulp.parallel('html'))
     gulp.watch('app/js/*.js', gulp.parallel('js'))
 
