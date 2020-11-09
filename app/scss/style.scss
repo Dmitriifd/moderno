@@ -54,9 +54,9 @@
             color: #a0a0a0;
             font-size: 14px;
         }
-        & + .header__circle {
-            margin-left: 15px;
-        }
+        // & + .header__circle {
+        //     margin-left: 15px;
+        // }
         span{
             position: absolute;
             width: 18px;
@@ -157,6 +157,8 @@
         }
 }
 
+
+
     &__btn {
         
         padding: 4px;
@@ -205,30 +207,47 @@
     }
 }
 
+
 .basket {
 
     &__box {
+        margin-left: 15px;
     }
 
     &__menu {
+        border-top: 1px solid #e0e0e0;
+        position: absolute;
+        top: 90px;
     }
 
     &__item {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 23px;
+        display: flex;
+        align-items: center;
+        width: 269px;
     }
 
     &__images {
+        margin-right: 15px;
     }
 
     &__info {
+
     }
 
     &__info-name {
+
     }
 
     &__info-theme {
+        color: $green;
     }
 
     &__info-price {
+
     }
 
     &__summ {
