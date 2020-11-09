@@ -53,3 +53,12 @@ body{
     display: inline-block;
     margin-right: 13px;
 }
+
+.angle-right {
+    position: relative;
+    padding-left: 15px;
+    &::before{
+        font-family: 'icomoon';
+        content: '\f105';
+    }
+}
